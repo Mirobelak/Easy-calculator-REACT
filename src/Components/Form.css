@@ -1,0 +1,16 @@
+.celok{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: fit-content;
+    padding: 20px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    border: 2px solid black;
+    border-radius: 20%;
+    font-size: large;
+
+}

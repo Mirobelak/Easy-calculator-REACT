@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react"
+import Formular from "./Components/Formular"
 
 function App() {
+  const title = "React FAST KALKULAČKA"
+  const [xState, setXState] = useState(0);
+  const [yState, setyState] = useState(0);
+
+  const inputXonchange = (event) => {
+    setXState(event.target.value);
+};
+
+  const inputYonChange= (event) => {
+    setyState(event.target.value)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>{title}</h1>
+    <Formular
+    xOnChange={inputXonchange}
+    yOnChange={inputYonChange}
+    x={xState}
+    y={yState}
+    />
     </div>
   );
 }
